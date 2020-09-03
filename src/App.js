@@ -29,15 +29,15 @@ class BooksApp extends React.Component {
     }))
   }
 
-  onChangeBookShelf = (bookID, shelf) => {
-    console.log(bookID, shelf)
-    BooksAPI.update(bookID, shelf)
+  onChangeBookShelf = (book, shelf) => {
+    const bookWithUpdatedShelf = book
+    bookWithUpdatedShelf.shelf = shelf
+    BooksAPI.update(book, shelf)
     .then(() => (
       this.setState(currentState => ({
         books: currentState.books.filter(b => {
-          if (b.id === bookID) return b.shelf = shelf
-          return b
-        })
+          return b.id !== book.id
+        }).concat(bookWithUpdatedShelf)
       }))
     ))
   }
