@@ -43,13 +43,14 @@ class BooksApp extends React.Component {
   }
 
   render() {
-    console.log(this.state.books)
+    // console.log(this.state.books)
     return (
       <div className="app">
         {this.state.showSearchPage ? (
           <SearchBooks
-            onClick={this.handleOnClick}
             books={this.state.books}
+            onClick={this.handleOnClick}
+            onChangeBookShelf={this.onChangeBookShelf}
           />
         ) : (
           <div>

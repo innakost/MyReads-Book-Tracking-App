@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class SearchBar extends Component {
+
+    static propTypes = {
+        onClick: PropTypes.func.isRequired
+    }
 
     state = {
         query: '',
