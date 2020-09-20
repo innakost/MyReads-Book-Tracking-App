@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 class SearchBar extends Component {
-
-    static propTypes = {
-        onClick: PropTypes.func.isRequired
-    }
 
     state = {
         query: '',
@@ -13,7 +9,7 @@ class SearchBar extends Component {
 
     handleOnChange = ( event ) => {
         this.setState({
-            query: event.target.value
+            query: event.target.value.trim()
         })
         this.props.onSearch(this.state.query)
         
@@ -22,7 +18,9 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="search-books-bar">
-                <button className="close-search" onClick={this.props.onClick}>Close</button>
+                <Link to="/">
+                    <button className="close-search">Close</button>
+                </Link>
                 <div className="search-books-input-wrapper">
                     <input type="text" placeholder="Search by title or author" value={this.state.query} onChange={this.handleOnChange} />
                 </div>
