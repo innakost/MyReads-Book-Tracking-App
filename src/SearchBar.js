@@ -9,7 +9,7 @@ class SearchBar extends Component {
 
     handleOnChange = ( event ) => {
         this.setState({
-            query: event.target.value.trim()
+            query: event.target.value
         })
         this.props.onSearch(this.state.query)
         
