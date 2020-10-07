@@ -11,7 +11,7 @@ class SearchBar extends Component {
         this.setState({
             query: event.target.value
         })
-        this.props.onSearch(this.state.query)
+        this.props.onSearch(event.target.value)
         
     }
 
