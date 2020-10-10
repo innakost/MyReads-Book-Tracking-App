@@ -18,7 +18,7 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="search-books-bar">
-                <Link to="/">
+                <Link to='/'>
                     <button className="close-search">Close</button>
                 </Link>
                 <div className="search-books-input-wrapper">
