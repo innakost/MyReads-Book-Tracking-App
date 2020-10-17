@@ -1,6 +1,6 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. Started HTML & CSS was included in the project so that I could focus with writing React code only.
+I was given a starter template for the final assessment project for Udacity's React Fundamentals course. HTML & CSS was included in the project so that I could focus with writing React code only.
 ## TL;DR
 
 To verify the project do the following:
